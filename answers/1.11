@@ -1,0 +1,2 @@
+I used nginx so I changed the Dockerfile to fit with the nginx standard. I used all the commands but I replaced my-flask-app by my-nginx-app and the ports I used are 8080:80.
+I run with: docker run -d -p 8080:80 -e WS_BACK_URL=https://5000-coursesilv-labdockercle-apw8j4hzd8p.ws-eu107.gitpod.io/ clementcarton/my-nginx-app

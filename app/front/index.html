@@ -28,7 +28,12 @@
     </style>
     <script>
         // const promiseOfSomeJsonData = fetch('http://localhost:8080/get/toto').then(r => r.json()).then(data => {
-        const promiseOfSomeJsonData = fetch('TR_WS_BACK_URL/get/example_of_path').then(r => r.json()).then(data => {
+        const promiseOfSomeJsonData = fetch('TR_WS_BACK_URL/get/example_of_path', {
+            mode:"cors",
+            headers: {
+                'Access-Control-Allow-Origin':'*'
+            }
+        }).then(r => r.json()).then(data => {
             return data;
         });
         window.onload = async () => {
