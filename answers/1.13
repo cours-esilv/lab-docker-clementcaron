@@ -1,0 +1,2 @@
+I used  docker exec -it back_app /bin/bash then curl -X POST https://8080-coursesilv-labdockercle-apw8j4hzd8p.ws-eu108.gitpod.io/write. Then I can see the post request on
+the logs file.

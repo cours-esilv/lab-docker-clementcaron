@@ -1,0 +1,3 @@
+I used 'docker stop $(docker ps -aq)' to stop all the containers. 
+Then I used 'docker rm $(docker ps -aq)' ro remove all the containers.
+'docker rmi $(docker images -q)' to remove all the local images.

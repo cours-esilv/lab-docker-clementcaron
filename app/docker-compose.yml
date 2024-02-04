@@ -1,0 +1,16 @@
+version: '3'
+services:
+  back-end:
+    image: clementcarton/my-flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=development
+    volumes:
+      - ./app/data 
+  front-end:
+    image: clementcarton/my-nginx-app 
+    ports:
+      - "8080:80"
+    environment:
+      - WS_BACK_URL=https://5000-coursesilv-labdockercle-apw8j4hzd8p.ws-eu108.gitpod.io/

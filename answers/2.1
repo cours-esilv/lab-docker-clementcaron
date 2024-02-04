@@ -1,0 +1,23 @@
+Here's my docker-compose.yml:
+
+version: '3'
+services:
+  back-end:
+    image: clementcarton/my-flask-app
+    ports:
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=development
+  front-end:
+    image: clementcarton/my-nginx-app 
+    ports:
+      - "80:80"
+    environment:
+      - WS_BACK_URL=http://5000-coursesilv-labdockercle-apw8j4hzd8p.ws-eu108.gitpod.io/
+
+And here's what I used to run it:
+
+docker-compose up -d
+
+Then I see it created with docker-compose ps.
+I also used docker-compose down to shutdown the container.
